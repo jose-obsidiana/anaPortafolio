@@ -15,6 +15,8 @@
   box-sizing: border-box;
 }
 
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -190,8 +192,16 @@ input, select, textarea {
 
 	p {
 		text-align: left;
-		margin: 0 0 2rem 0;
+		margin: 0;
 	}
+
+	.fecha {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 600;
+		font-size: 13px;
+
+	}
+
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -851,6 +861,14 @@ input, select, textarea {
 
 						.row.gtr-200.gtr-uniform > * {
 							padding-top: 3rem;
+						}
+
+						.column-1, .column-2, .column-3 {
+							flex: 1;
+							
+						}
+						.column-2, .column-3 {
+							padding-left: 3rem;
 						}
 
 		}
@@ -2902,9 +2920,10 @@ input, select, textarea {
 
 	ol {
 		list-style: decimal;
-		margin: 0 0 2rem 0;
+		margin: 0 ;
 		padding-left: 1.25rem;
-	}
+		font-family:Arial, Helvetica, sans-serif;
+		}
 
 		ol li {
 			padding-left: 0.25rem;
