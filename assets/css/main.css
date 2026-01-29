@@ -3889,7 +3889,8 @@ input, select, textarea {
 
 			#main > .post.featured {
 				text-align: center;
-				padding: 8rem;
+				padding-top: 2rem;
+		
 			}
 
 			@media screen and (max-width: 1280px) {
@@ -4030,6 +4031,11 @@ input, select, textarea {
 			#main > * {
 				padding: 2rem 2rem 0.1rem 2rem ;
 			}
+			
+			#main > section header .header-ana {
+				padding-top: 2rem;
+			}
+
 
 		}
 
@@ -4940,7 +4946,7 @@ input, select, textarea {
   background: #fff;
   border: 1px solid var(--gris-border);
   border-radius: 20px;
-  padding: 25px;
+  padding: 25px 18px 25px 18px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.03);
   position: relative;
 
@@ -4999,6 +5005,8 @@ input, select, textarea {
 .company {
   font-weight: 500;
   margin: 6px 0;
+  border-bottom: 1px solid var(--gris-border);
+
 }
 
 .location,
@@ -5008,8 +5016,9 @@ input, select, textarea {
 }
 
 .card ul {
-  margin-top: auto;
+  margin-top: 2rem;
   padding-left: 18px;
+  margin-bottom: 1rem;
 }
 
 .card li {
