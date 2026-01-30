@@ -1863,6 +1863,10 @@ input, select, textarea {
 							padding-top: 3rem;
 						}
 
+							section .columns {
+							padding: 2rem;
+						}
+
 		}
 
 		@media screen and (max-width: 360px) {
@@ -2107,6 +2111,8 @@ input, select, textarea {
 						.row.gtr-200.gtr-uniform > * {
 							padding-top: 3rem;
 						}
+
+				
 
 		}
 
@@ -2992,6 +2998,10 @@ input, select, textarea {
 
 	header {
 		cursor: default;
+  	
+		 position: relative;
+  overflow: visible;
+		
 	}
 
 		header > .date {
@@ -3685,12 +3695,9 @@ input, select, textarea {
 				}
 
 
-				 .header-ana .contenedor-contact {
-						display: none;
-				}
 
 				.header-ana .contenedor-img .ana-portada {
-					width: 100%;
+					width: 80%;
 			
 				}
 
@@ -3860,8 +3867,7 @@ input, select, textarea {
 	}
 
 		#main > * {
-			padding: 2rem 4rem 2rem 4rem ;
-			border-top: solid 2px #eeeeee;
+			
 			margin: 0;
 		}
 
@@ -3892,14 +3898,11 @@ input, select, textarea {
 				padding-top: 2rem;
 		
 			}
+			#main > .post {
+								padding: 0rem 4rem 4rem 4rem ;
+							}
 
-			@media screen and (max-width: 1280px) {
 
-				#main > .post {
-					padding: 0rem 4rem 4rem 4rem ;
-				}
-
-			}
 
 			@media screen and (max-width: 736px) {
 
@@ -4029,7 +4032,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#main > * {
-				padding: 2rem 2rem 0.1rem 2rem ;
+				padding:0 ;
 			}
 			
 			#main > section header .header-ana {
@@ -4064,10 +4067,14 @@ input, select, textarea {
 		cursor: default;
 		position: relative;
 		margin: 0 auto;
-		width: calc(100% - 4rem);
-		max-width: 80rem;
 		z-index: 2;
-	}
+		border: 2px solid rgb(216, 216, 216);
+
+		width: 100%;
+		max-width: none;
+		margin: 0;
+		box-sizing: border-box;
+}
 
 		#footer input, #footer select, #footer textarea {
 			color: #717981;
@@ -4850,24 +4857,37 @@ input, select, textarea {
 }
 
 
-
-
 /* header ana */
- .header-ana {
-		border-bottom: 3px solid #f0f0f0;
-		
+ header .header-ana {
+		border-bottom: 1px solid #f0f0f0;
+		padding: 2rem 4rem 0 4rem;
 		display: grid;
   		grid-template-columns: 1fr 1fr 1fr; /* 3 partes iguales */
  		align-items: center;
+		
+		position: relative;
+		z-index: 20;
+
+		background: #f4f4f4;
+		box-shadow: 3px 0px 20px 0px rgba(147, 147, 147, 0.18);
+
+
  }
+
+
 
 .contenedor-img {
 	 display: flex;
   	align-items: flex-end;      /* abajo */
   	justify-content: flex-start; /* izquierda */
+	padding: 0;
+	
 }
 .ana-portada {
-	width: 50%;
+	width: 40%;
+	border-radius: 50%;
+	border: 2px solid rgb(216, 216, 216);
+	background-color: rgb(243, 232, 232);
 }
 
 .h2-portada {
@@ -4878,18 +4898,21 @@ input, select, textarea {
 
 /** CONTACTO ICONS **/
 
-.contenedor-contact {
+.contenedor-contact, .contenedor-img {
   	display: flex;
  	flex-direction: column;   /* uno debajo del otro */
-	
-  	margin-left: auto;        /* empuja todo el bloque hacia la derecha */
-  	margin-top: auto;
+	align-items: center;
+	justify-content: center;
+
 }
 
-.icons-contact {
-	margin-top: 1rem;
+.h5-contact {
+	margin-bottom: 0.5rem;
+	font-weight:normal;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding-left: 1.3rem;
 }
-
 .icono-fa {
   width: 15px;
   height: 15px;
@@ -5023,4 +5046,19 @@ input, select, textarea {
 
 .card li {
   margin-bottom: 6px;
+}
+
+
+/* CONTACT */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  /* altura de ejemplo para que se note el centrado vertical */
+  min-height: 200px;
+	padding: 6rem;
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; } /* pasa a 1 columna en móviles */
 }
