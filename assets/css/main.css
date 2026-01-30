@@ -1127,11 +1127,15 @@ input, select, textarea {
     			grid-template-columns: 1fr; /* una columna */
     			gap: 1rem;
 				box-sizing: border-box;
-				align-items: stretch;
+				align-items: stretch;			
+
 			}
+
 
 				.row > * {
 					box-sizing: border-box;
+					  width: 100%;
+  					max-width: 100%;
 				}
 
 				.row.gtr-uniform > * > :last-child {
@@ -1369,12 +1373,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			.row {
-				display: flex;
-				flex-wrap: wrap;
-				box-sizing: border-box;
-				align-items: stretch;
-			}
+	
 
 				.row > * {
 					box-sizing: border-box;
@@ -1620,16 +1619,13 @@ input, select, textarea {
 							padding-top: 3rem;
 						}
 
+
+
 		}
 
 		@media screen and (max-width: 480px) {
 
-			.row {
-				display: flex;
-				flex-wrap: wrap;
-				box-sizing: border-box;
-				align-items: stretch;
-			}
+
 
 				.row > * {
 					box-sizing: border-box;
@@ -3565,7 +3561,7 @@ input, select, textarea {
 
 			#intro {
 				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				min-height: 65vh;
 			}
 
 				#intro h1 {
@@ -4079,7 +4075,14 @@ input, select, textarea {
 		max-width: none;
 		margin: 0;
 		box-sizing: border-box;
-}
+		}
+
+
+		#footer .row {
+		width: auto;
+			margin-left: 0;
+			margin-right: 0;
+		}
 
 		#footer input, #footer select, #footer textarea {
 			color: #717981;
@@ -4376,6 +4379,8 @@ input, select, textarea {
 						-ms-flex-grow: 0;
 						flex-grow: 0;
 						width: 6rem;
+					
+
 					}
 
 					#footer > section.split.contact > section > :last-child {
@@ -4391,6 +4396,7 @@ input, select, textarea {
 
 					#footer > section.split.contact > section:first-child {
 						padding: 4rem 4rem 3rem 4rem;
+						
 					}
 
 					#footer > section.split.contact > section:last-child {
@@ -4408,10 +4414,12 @@ input, select, textarea {
 							margin-top: -0.325rem;
 						}
 
-		#footer form label,
-		#footer h3,
-		#footer p {
-			font-size: 0.8rem;
+					#footer form label,
+					#footer h3,
+					#footer p {
+						font-size: 0.8rem;
+
+					
 		}
 
 		@media screen and (max-width: 980px) {
@@ -4458,6 +4466,16 @@ input, select, textarea {
 					font-size: 0.9rem;
 				}
 
+					.split.contact > section {
+						border-top: none;
+						padding: 20px 0;
+					}
+					
+					.split.contact > section:not(:first-child) {
+  						border-top: 2px solid #a5a4a433;
+					}
+				
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -4489,6 +4507,13 @@ input, select, textarea {
 					#footer > section.split.contact > section:last-child {
 						padding: 2rem;
 					}
+					  .split.contact {
+						flex-direction: column;
+					}
+
+				
+	
+
 
 		}
 
@@ -5072,3 +5097,4 @@ input, select, textarea {
 @media (max-width: 600px) {
   .grid { grid-template-columns: 1fr; } /* pasa a 1 columna en móviles */
 }
+
