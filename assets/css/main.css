@@ -1116,6 +1116,8 @@ input, select, textarea {
 							padding-top: 3rem;
 						}
 
+						
+
 		}
 
 		@media screen and (max-width: 980px) {
@@ -3880,7 +3882,7 @@ input, select, textarea {
 		}
 
 		#main > .post {
-			padding: 0rem 4rem 6rem 4rrem ;
+			padding: 6rem 4rem 6rem 4rrem ;
 		}
 
 			#main > .post header.major > .date {
@@ -3895,11 +3897,11 @@ input, select, textarea {
 
 			#main > .post.featured {
 				text-align: center;
-				padding-top: 2rem;
+			
 		
 			}
 			#main > .post {
-								padding: 0rem 4rem 4rem 4rem ;
+								padding: 6rem 4rem 4rem 4rem ;
 							}
 
 
@@ -3907,7 +3909,7 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#main > .post {
-					padding: 0rem 2rem 2rem 2rem ;
+					padding: 2rem ;
 				}
 
 					#main > .post header.major > .date {
@@ -3957,7 +3959,7 @@ input, select, textarea {
 			}
 
 			#main > .posts > * {
-				padding: 4rem;
+				padding: 6rem  4rem;
 				width: 50%;
 			}
 
@@ -4039,6 +4041,10 @@ input, select, textarea {
 				padding-top: 2rem;
 			}
 
+			.header-ana .contenedor-img .ana-portada {
+				width: 70%;
+		
+			}
 
 		}
 
@@ -4068,7 +4074,6 @@ input, select, textarea {
 		position: relative;
 		margin: 0 auto;
 		z-index: 2;
-		border: 2px solid rgb(216, 216, 216);
 
 		width: 100%;
 		max-width: none;
@@ -4884,7 +4889,7 @@ input, select, textarea {
 	
 }
 .ana-portada {
-	width: 40%;
+	width: 50%;
 	border-radius: 50%;
 	border: 2px solid rgb(216, 216, 216);
 	background-color: rgb(243, 232, 232);
@@ -5056,7 +5061,12 @@ input, select, textarea {
   gap: 16px;
   /* altura de ejemplo para que se note el centrado vertical */
   min-height: 200px;
-	padding: 6rem;
+	padding: 0 6rem 2rem 6rem;
+}
+
+
+.p-contact {
+	text-align: center;
 }
 
 @media (max-width: 600px) {
