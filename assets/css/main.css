@@ -84,6 +84,18 @@ input, select, textarea {
 	appearance: none;
 }
 
+.experience ul li  {
+	line-height: 1.5;
+}
+
+section .training ul li, .awards {
+	margin-bottom: 1rem;
+}
+
+section .skills {
+	margin-top: 0;
+}
+
 
 
 
@@ -193,6 +205,10 @@ input, select, textarea {
 	p {
 		text-align: left;
 		margin: 0;
+	}
+
+	#intro .p-disegner {
+		font-size: 1.5rem;
 	}
 
 	.fecha {
@@ -874,6 +890,10 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1280px) {
+
+					#footer > section.no-padding {
+				padding:3rem;
+			}
 
 			.row {
 				display: flex;
@@ -2716,10 +2736,8 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 4rem 0;
 			width: 100%;
-			background-color: #fcfafa;
-			border: 3px solid #eeeeee;
+
 		}
 
 			.image.main:first-child {
@@ -2733,10 +2751,6 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.image.fit {
-				margin: 2rem 0;
-			}
-
-			.image.main {
 				margin: 2rem 0;
 			}
 
@@ -4428,6 +4442,10 @@ input, select, textarea {
 				display: block;
 			}
 
+				#footer > section.no-padding {
+				padding: 1rem;
+			}
+
 				#footer > section {
 					border-top: solid 2px #e2e2e2;
 				}
@@ -4482,6 +4500,9 @@ input, select, textarea {
 
 			#footer > section {
 				padding: 2rem 2rem 0.1rem 2rem ;
+			}
+			#footer > section.no-padding {
+				padding-top: 10px;
 			}
 
 				#footer > section.split > section {
@@ -4904,7 +4925,7 @@ input, select, textarea {
 
  }
 
-
+ /* INDEX PORTADA */
 
 .contenedor-img {
 	 display: flex;
@@ -4924,6 +4945,198 @@ input, select, textarea {
 	text-align: center;
 	padding: 0;
 }
+
+.border-portada {
+	margin: 2rem;
+	border: 2px solid rgb(216, 216, 216);
+	background-color: rgb(252, 246, 246);
+	display: grid;
+	grid-template-columns: 43% 52%;
+	gap: 5%;
+}
+.column-portada {
+	border: 2px solid rgb(216, 216, 216);
+	background-color: #fcfafa;
+	margin-bottom: 2rem;
+	margin: 4rem;
+}
+	
+.col1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.col2 {
+	text-align: center;
+	font-style: italic;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.1rem;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+  color: #444444;
+  padding-right: 1rem;
+}
+
+.col-description {
+	margin-top: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 3rem;
+  	animation: fadeUp 3s ease-out;
+	
+}
+
+
+
+.col-description p {
+
+	margin: 0;
+  letter-spacing: 0.45rem;
+  font-weight: 400;
+  position: relative;
+  padding-left: 2rem;
+	font-size: 1rem;
+  opacity: 0.75;
+    line-height: 1;
+	transition: all 0.3s ease;
+
+	
+}
+
+.col-description p::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #e7b7c8; /* rosa suave */
+  font-size: 1.2rem;
+}
+
+.col-description p:hover {
+  letter-spacing: 0.6rem;
+  opacity: 0.90;
+}
+
+.col-description p strong { 
+color: #4d3c3c;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .border-portada {
+    grid-template-columns: 1fr;
+    gap: 0;
+	margin: 2rem;
+  }
+
+  .column-portada {
+    margin: 0 0 2rem 0;
+  }
+
+  .contenedor-img {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ana-portada {
+    width: 65%;
+  }
+
+  .col2 {
+    padding-right: 0;
+    font-size: 1rem;
+  }
+
+  .col-p {
+    display: none;
+  }
+
+  .col-description {
+	margin-top: 2rem;
+	gap: 1.3rem
+  }
+
+  .col-description p {
+    font-size: 0.95rem;
+    letter-spacing: 0.25rem;
+    padding-left: 1.5rem;
+
+  }
+
+  .col-description p::before {
+    font-size: 1rem;
+  }
+
+    .col1 {
+    order: 2; /* imagen abajo */
+  }
+
+  .col2 {
+    order: 1; /* texto arriba */
+  }
+
+  /* desactivar hover en touch */
+  @media (hover: none) {
+    .col-description p:hover {
+      letter-spacing: 0.25rem;
+      opacity: 0.75;
+    }
+  }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .border-portada {
+    grid-template-columns: 45% 55%;
+    gap: 3%;
+  }
+
+  .column-portada {
+    margin: 2.5rem;
+  }
+
+  .ana-portada {
+    width: 55%;
+  }
+
+  .col2 {
+    font-size: 1.05rem;
+  }
+
+  .col-description {
+    margin-top: 3rem;
+    gap: 2.5rem;
+  }
+
+  .col-description p {
+    letter-spacing: 0.35rem;
+  }
+
+}
+
+
+
+
+
+
 
 
 /** CONTACTO ICONS **/
