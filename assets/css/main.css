@@ -207,9 +207,7 @@ section .skills {
 		margin: 0;
 	}
 
-	#intro .p-disegner {
-		font-size: 1.5rem;
-	}
+
 
 	.fecha {
 		font-family: Arial, Helvetica, sans-serif;
@@ -4953,12 +4951,16 @@ section .skills {
 	display: grid;
 	grid-template-columns: 43% 52%;
 	gap: 5%;
+
+
 }
 .column-portada {
 	border: 2px solid rgb(216, 216, 216);
 	background-color: #fcfafa;
 	margin-bottom: 2rem;
-	margin: 4rem;
+	margin: 6rem;
+
+
 }
 	
 .col1 img {
@@ -4988,10 +4990,23 @@ section .skills {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	gap: 3rem;
   	animation: fadeUp 3s ease-out;
+	    margin-top: 3rem;
+	gap: 3rem;
 	
 }
+
+
+
+  .col-description p {
+    letter-spacing: 0.35rem;
+
+  }
+
+  	.col-p  {
+		font-size: 1.1rem;
+		gap: 3rem;
+	}
 
 
 
@@ -5010,13 +5025,7 @@ section .skills {
 	
 }
 
-.col-description p::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #e7b7c8; /* rosa suave */
-  font-size: 1.2rem;
-}
+
 
 .col-description p:hover {
   letter-spacing: 0.6rem;
@@ -5043,7 +5052,7 @@ color: #4d3c3c;
   .border-portada {
     grid-template-columns: 1fr;
     gap: 0;
-	margin: 2rem;
+	margin: 0.5rem;
   }
 
   .column-portada {
@@ -5058,6 +5067,7 @@ color: #4d3c3c;
   .ana-portada {
     width: 65%;
   }
+ 
 
   .col2 {
     padding-right: 0;
@@ -5088,6 +5098,10 @@ color: #4d3c3c;
     order: 2; /* imagen abajo */
   }
 
+   .col1  {
+	width: 80%;
+  }
+
   .col2 {
     order: 1; /* texto arriba */
   }
@@ -5099,23 +5113,45 @@ color: #4d3c3c;
       opacity: 0.75;
     }
   }
-
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (max-width: 980px) {
+	.col-p  {
+		font-size: 0.9rem;
+
+	}
+
+	.col-description {
+	gap: 1rem;
+	margin-top: 1rem;
+	}
+
+	.col-description p {
+	
+		font-size: 0.8rem;
+		
+	}
+}
+
+
+
+@media screen and (min-width: 981px) and (max-width: 1050px) {
 
   .border-portada {
     grid-template-columns: 45% 55%;
     gap: 3%;
+	padding: 4rem 0 0 0;
   }
 
   .column-portada {
-    margin: 2.5rem;
+    margin: 6rem;
   }
 
   .ana-portada {
     width: 55%;
   }
+
+  
 
   .col2 {
     font-size: 1.05rem;
@@ -5123,12 +5159,24 @@ color: #4d3c3c;
 
   .col-description {
     margin-top: 3rem;
-    gap: 2.5rem;
+	gap: 2rem;
+  
   }
 
   .col-description p {
     letter-spacing: 0.35rem;
+	
   }
+
+  	.col-p  {
+		font-size: 0.9rem;
+		  gap: 3rem;
+
+	}
+
+
+
+
 
 }
 
