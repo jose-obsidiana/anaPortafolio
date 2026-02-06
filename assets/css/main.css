@@ -4,7 +4,7 @@
 :root {
   --color-principal: #4FAF8F;
   --verdeagua: #00A498;
-  --rosa: #F1BCA4; 
+  --rosa: #f0c895; 
   --gris-border: #eeeeee;
 
 }
@@ -94,6 +94,10 @@ section .training ul li, .awards {
 
 section .skills {
 	margin-top: 0;
+}
+
+.div-awards {
+	padding: 6rem;
 }
 
 .date  {
@@ -522,6 +526,10 @@ section .skills {
 			padding-left: 4rem;
 			box-sizing: border-box;
 					}
+
+		.row > .col-14.no-border {
+			border: none;
+		}
 
 		.row > .off-14 {
 			margin-left: 40%;
@@ -4871,6 +4879,17 @@ section .skills {
 	margin-bottom: 3rem;
 }
 
+.h2-skills {
+	margin-top: 4rem;
+}
+.skill {
+	display: grid;
+	grid-template-columns: auto 70%;
+	justify-content:right;
+	align-items: center;
+	gap: 1rem;
+}
+
 
 .skills, .myprocess {
     width: 100%;
@@ -5248,13 +5267,18 @@ color: #4d3c3c;
  gap: 2%;
 
 }
-
+.card.show {
+	margin-bottom: 0;
+}
 
 
 /* Tablet */
 @media (max-width: 900px) {
   .experience-grid {
     column-count: 2;
+  }
+  .card {
+	margin-bottom: 0;
   }
 }  
 
@@ -5282,7 +5306,7 @@ color: #4d3c3c;
 
 display: flex;
   flex-direction: column;
-  height: 100%;   
+
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 	opacity: 0;
   transform: translateY(20px);
