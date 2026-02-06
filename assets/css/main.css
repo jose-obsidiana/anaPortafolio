@@ -89,11 +89,15 @@ input, select, textarea {
 }
 
 section .training ul li, .awards {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 section .skills {
 	margin-top: 0;
+}
+
+.date  {
+	line-height: 1.3rem;
 }
 
 
@@ -505,7 +509,7 @@ section .skills {
 		}
 
 		.row > .col-13 {
-			width: 60%;
+			width: 55%;
 		}
 
 		.row > .off-13 {
@@ -513,9 +517,9 @@ section .skills {
 		}
 
 		.row > .col-14 {
-			width: 40%;
+			width: 45%;
 			border-left: 7px solid var(--rosa);
-			padding-left: 2rem;
+			padding-left: 4rem;
 			box-sizing: border-box;
 					}
 
@@ -3890,7 +3894,7 @@ section .skills {
 		}
 
 		#main > .post {
-			padding: 6rem 4rem 6rem 4rrem ;
+			padding: 6rem ;
 		}
 
 			#main > .post header.major > .date {
@@ -3909,7 +3913,7 @@ section .skills {
 		
 			}
 			#main > .post {
-								padding: 6rem 4rem 4rem 4rem ;
+								padding: 6rem;
 							}
 
 
@@ -4860,7 +4864,7 @@ section .skills {
 }
 
 .education, .training {
-  margin: 0px 2rem auto 0;	
+  margin: 0px 4rem auto 0;	
 }
 
 .tresd, .dosd, .off, .myprocess  {
@@ -5227,8 +5231,9 @@ color: #4d3c3c;
 /* EXPERIENCE */
 
 .experience {
-  max-width: 1100px;
-  margin: 60px auto;
+  max-width: auto;
+  padding: 6rem;
+  background-color: #f7f7f7;
 
 }
 
@@ -5238,28 +5243,36 @@ color: #4d3c3c;
 }
 
 .experience-grid {
- column-width: 320px;   /* 👈 clave para que no se rompan columnas */
-  column-gap: 15px;
+ display: grid;
+ grid-template-columns: 53% 45%;
+ gap: 2%;
+
 }
+
+
 
 /* Tablet */
 @media (max-width: 900px) {
   .experience-grid {
     column-count: 2;
   }
-}
+}  
 
 /* Mobile */
 @media (max-width: 600px) {
+
+
   .experience-grid {
-    column-count: 1;
+    display: flex;
+	flex-direction: column;
+		padding: 2rem;
   }
 }
 
 .card {
   background: #fff;
   border: 1px solid var(--gris-border);
-  border-radius: 20px;
+
   padding: 25px 18px 25px 18px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.03);
   position: relative;
@@ -5267,10 +5280,11 @@ color: #4d3c3c;
   break-inside: avoid;
   margin-bottom: 25px;
 
-  display: inline-block; /* 👈 la línea mágica */
-  width: 100%;
+display: flex;
+  flex-direction: column;
+  height: 100%;   
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-	 opacity: 0;
+	opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
