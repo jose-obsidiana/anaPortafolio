@@ -4,8 +4,9 @@
 :root {
   --color-principal: #4FAF8F;
   --verdeagua: #00A498;
-  --rosa: #f0c895; 
+  --rosa: #ecc69f; 
   --gris-border: #eeeeee;
+  --gris-fondo: #f7f7f7;
 
 }
 
@@ -98,6 +99,48 @@ section .skills {
 
 .div-awards {
 	padding: 6rem;
+
+}
+.contenedor-awards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.card-awards {
+
+  background: #fff;
+  border: 1px solid var(--gris-border);
+
+  padding: 25px 18px 25px 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+  position: relative;
+
+  break-inside: avoid;
+  margin-bottom: 25px;
+
+display: grid;
+grid-template-columns: 70% 30%;
+
+
+
+}
+
+.h3-awards {
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+}
+
+.h6-awards {
+	padding-left: 0.8rem;
+
+}
+
+.col1-awards {
+	border-right: 1px solid var(--gris-border);
+	margin-right: 2rem;
+	font-weight: 500;
 }
 
 .date  {
@@ -358,6 +401,10 @@ section .skills {
 		color: #212931;
 	}
 
+	.h2-awards, .h2-experience {
+		text-align: center;
+	}
+
 	blockquote {
 		border-left-color: #eeeeee;
 	}
@@ -513,7 +560,7 @@ section .skills {
 		}
 
 		.row > .col-13 {
-			width: 55%;
+			width: 50%;
 		}
 
 		.row > .off-13 {
@@ -521,11 +568,11 @@ section .skills {
 		}
 
 		.row > .col-14 {
-			width: 45%;
-			border-left: 7px solid var(--rosa);
+			width: 50%;
+			border-left: 3px solid var(--rosa);
 			padding-left: 4rem;
 			box-sizing: border-box;
-					}
+		}
 
 		.row > .col-14.no-border {
 			border: none;
@@ -597,7 +644,7 @@ section .skills {
 
 		.row {
 			margin-top: 0;
-			margin-left: -1.5rem;
+		
 		}
 
 			.row > * {
@@ -793,7 +840,7 @@ section .skills {
 				}
 
 					.row.gtr-0 > * {
-						padding: 0 0 0 0rem;
+						padding: 0 m;
 					}
 
 					.row.gtr-0.gtr-uniform {
@@ -840,11 +887,11 @@ section .skills {
 
 				.row {
 					margin-top: 0;
-					margin-left: -1.5rem;
+		
 				}
 
 					.row > * {
-						padding: 0 0 0 1.5rem;
+						padding: 0;
 					}
 
 					.row.gtr-uniform {
@@ -910,6 +957,8 @@ section .skills {
 				flex-wrap: wrap;
 				box-sizing: border-box;
 				align-items: stretch;
+				margin: 0;
+				width: 100%;
 			}
 
 				.row > * {
@@ -1097,11 +1146,11 @@ section .skills {
 
 				.row {
 					margin-top: 0;
-					margin-left: -1.5rem;
+				;
 				}
 
 					.row > * {
-						padding: 0 0 0 1.5rem;
+						padding: 0;
 					}
 
 					.row.gtr-uniform {
@@ -4875,8 +4924,8 @@ section .skills {
   margin: 0px 4rem auto 0;	
 }
 
-.tresd, .dosd, .off, .myprocess  {
-	margin-bottom: 3rem;
+.tresd, .dosd, .myprocess  {
+	margin-bottom: 4rem;
 }
 
 .h2-skills {
@@ -4894,7 +4943,7 @@ section .skills {
 .skills, .myprocess {
     width: 100%;
   	max-width: 100%;
-  	margin: 40px auto;
+
 
 }
 
@@ -5250,9 +5299,9 @@ color: #4d3c3c;
 /* EXPERIENCE */
 
 .experience {
-  max-width: auto;
   padding: 6rem;
-  background-color: #f7f7f7;
+  background-color: var(--gris-fondo);
+  margin: 0 auto;
 
 }
 
@@ -5263,8 +5312,8 @@ color: #4d3c3c;
 
 .experience-grid {
  display: grid;
- grid-template-columns: 53% 45%;
- gap: 2%;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 1rem;
 
 }
 .card.show {
@@ -5275,7 +5324,9 @@ color: #4d3c3c;
 /* Tablet */
 @media (max-width: 900px) {
   .experience-grid {
-    column-count: 2;
+    display: flex;
+	flex-direction: column;
+
   }
   .card {
 	margin-bottom: 0;
@@ -5284,12 +5335,13 @@ color: #4d3c3c;
 
 /* Mobile */
 @media (max-width: 600px) {
-
+	.experience {
+		padding: 2rem;
+	}
 
   .experience-grid {
     display: flex;
 	flex-direction: column;
-		padding: 2rem;
   }
 }
 
@@ -5345,14 +5397,10 @@ display: flex;
 
 .card h3 {
   margin-top: 10px;
-  color: var(--verdeagua);
   font-size: 1.1rem;
-  transition: letter-spacing 0.3s ease;
 }
 
-.card:hover h3 {
-  letter-spacing: 0.5px;
-}
+
 
 .company {
   font-weight: 500;
